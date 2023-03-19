@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { CadastroComponent } from './components/cadastro/cadastro.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { DialogModule } from 'primeng/dialog';
+import { ButtonModule } from 'primeng/button'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +20,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    DialogModule,
+    ButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

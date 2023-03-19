@@ -13,8 +13,10 @@ export class CadastroComponent {
   public httpClient: HttpClient;
   public baseUrl: string;
   public usuario: Usuario = new Usuario();
-  public mensagem: string = "";
-  public showMensagem: boolean = false;
+  public message: string = "";
+  public showMessage: boolean = false;
+
+  displayBasic: boolean;
 
   name = new FormControl();
   email = new FormControl();
@@ -59,14 +61,19 @@ export class CadastroComponent {
       this.form.reset();
   }
 
-  apresentarMensagem(mensagem: any) {
-    this.mensagem = mensagem;
-    this.showMensagem = this.mensagem != null ? true : false;
+  apresentarMensagem(mensage: any) {
+    this.message = mensage;
+    this.showMessage = this.message != null ? true : false;
   }
 
   limparTela(all: boolean){
     this.usuario.name = "";
     this.usuario.email = "";
     this.usuario.phone = "";
+  }
+
+  showPopupMensagem(show: any) {
+    this.showMessage = show;
+    return false;
   }
 }
