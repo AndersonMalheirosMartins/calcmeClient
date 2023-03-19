@@ -1,0 +1,18 @@
+<div class="mb-3">
+  <h1>Campos para cadastro</h1>
+</div>
+<form [formGroup]="form">
+  <div class="mb-3">
+    <label for="name" class="form-label">Nome</label>
+    <input formControlName="name" type="text" class="form-control" id="name" [(ngModel)]="this.usuario.name" placeholder="Preencha o nome" required>
+  </div>
+  <div class="mb-3">
+    <label for="email" class="form-label">E-mail</label>
+    <input formControlName="email" type="email" class="form-control" id="email" [(ngModel)]="this.usuario.email" placeholder="Preencha o e-mail" required>
+  </div>
+  <div class="mb-3">
+    <label for="phone" class="form-label">Telefone</label>
+    <input formControlName="phone" type="text" class="form-control" id="phone" [(ngModel)]="this.usuario.phone" placeholder="Preenha o telafone. ex: 55 (xx) 99999-9999" required>
+  </div>
+  <button class="btn btn-primary" (click)="gravar();">Gravar</button>
+</form>
